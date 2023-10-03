@@ -1,0 +1,160 @@
+/* color */
+:root{
+    --blue-900: hsl(217, 54%, 11%);
+    --blue-500: hsl(216, 50%, 16%);
+    --blue-300: hsl(215, 32%, 27%);
+    --blue-100: hsl(215, 51%, 70%);
+    --Cyan-100: hsl(178, 100%, 50%);
+}
+
+
+/* Globe */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--blue-900);
+}
+
+/* 段落樣式 Type */
+
+h1{
+    color:#fff;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+}
+h1:hover{
+    color: var(--Cyan-100);
+}
+p{
+    color: var(--blue-100);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px; /* 144.444% */
+}
+.score p {
+    color:var(--Cyan-100);
+    font-size: 15px;
+    font-weight: 600;
+}
+.score span {
+    color:var(--blue-100);
+}
+.score span,.author p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.author p a {
+    color:#fff;
+    cursor: pointer;
+}
+.author p a:hover {
+    color:var(--Cyan-100);
+}
+
+
+/* 容器 Type */
+
+.card {
+    width: 327px;
+    border-radius: 15px;
+    background: var(--blue-500);
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.10);
+}
+.picture {
+    width: 278px;
+    height: 278px;
+    border-radius: 8px;
+    background: url(/images/image-equilibrium.jpg);
+    background-size: 110%;
+    background-position: center center;
+    margin: auto;
+    position: relative;
+}
+.picture:before {
+    content: "";
+    width: 278px;
+    height: 278px;
+    border-radius: 8px;
+    background: rgba(0, 255, 248, 0.7);
+    position: absolute;
+    background-image: url(/images/icon-view.svg);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+}
+.picture:hover.picture:before {
+    opacity: 1;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+.author-img {
+    width: 33px;
+    height: 33px;
+    border-radius: 33px;
+    border: 1px solid #fff;
+    background: url(/images/image-avatar.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 1rem;
+}
+
+
+/* 
+==================
+layout
+==================
+*/
+body {
+    display: flex;flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    padding: 1.5rem;
+}
+.score , .score div {
+    display: flex;
+    align-items: center;
+}
+.score {
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blue-100);
+}
+
+.author {
+    margin-top: 1rem;
+}
+/* 間距 */
+.txt h1{
+    margin-top: 1.5rem;
+}
+.txt p {
+    margin-top: 1rem;
+}
+
+/* 
+==================
+footer
+==================
+*/
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+    color:gray;
+    margin-top: 1rem;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
